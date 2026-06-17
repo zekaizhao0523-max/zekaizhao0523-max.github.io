@@ -1401,6 +1401,7 @@ h1 {
 .project-media {
   display: grid;
   place-items: center;
+  height: clamp(300px, 25vw, 360px);
   margin: 18px 0 20px;
   border: 1px solid rgba(255, 244, 210, 0.18);
   border-radius: 18px;
@@ -1414,7 +1415,7 @@ h1 {
 .project-media img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
 }
@@ -1422,8 +1423,7 @@ h1 {
 .project-media-phone {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  align-items: start;
-  padding: 14px;
+  align-items: center;
   background:
     radial-gradient(circle at 50% 18%, rgba(255, 214, 107, 0.1), transparent 34%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)),
@@ -1431,11 +1431,11 @@ h1 {
 }
 
 .project-media-phone img {
-  width: 100%;
-  max-height: 360px;
-  aspect-ratio: 9 / 18.3;
-  object-fit: cover;
-  object-position: center top;
+  width: auto;
+  max-width: 100%;
+  height: calc(clamp(300px, 25vw, 360px) - 2px);
+  object-fit: contain;
+  object-position: center;
   border-radius: 10px;
   box-shadow: 0 22px 46px rgba(2, 7, 19, 0.34);
 }
