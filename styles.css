@@ -1398,25 +1398,41 @@ h1 {
   line-height: 1.76;
 }
 
-.project-metrics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 18px 0;
+.project-media {
+  display: grid;
+  place-items: center;
+  margin: 18px 0 20px;
+  border: 1px solid rgba(255, 244, 210, 0.18);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)),
+    rgba(5, 11, 22, 0.28);
+  box-shadow: 0 16px 40px rgba(31, 18, 8, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  overflow: hidden;
 }
 
-.project-metrics span {
-  display: inline-flex;
-  min-height: 36px;
-  align-items: center;
-  padding: 0 12px;
-  border: 1px solid rgba(231, 196, 111, 0.28);
-  border-radius: 8px;
-  color: #16110b;
-  background: linear-gradient(145deg, rgba(255, 244, 210, 0.96), rgba(255, 214, 107, 0.82));
-  box-shadow: 0 12px 26px rgba(31, 18, 8, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.58);
-  font-size: 13px;
-  font-weight: 900;
+.project-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.project-media-phone {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 214, 107, 0.1), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)),
+    rgba(5, 11, 22, 0.28);
+}
+
+.project-media-phone img {
+  width: min(62%, 280px);
+  max-height: 420px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 22px 46px rgba(2, 7, 19, 0.34);
 }
 
 .contact-section {
