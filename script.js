@@ -154,6 +154,7 @@ const languageCopy = {
       { selector: ".practice-card:nth-child(2) li:nth-child(2)", html: "基于 <span class=\"text-highlight\">TOPSIS-熵权法</span> 构建时间币发放体系，将调研信息转化为量化评价方案。" },
       { selector: "#contact .section-kicker", text: "Contact" },
       { selector: "#contact h2", text: "期待参与 AI 驱动的数据科学项目，把数据洞察真正推向业务决策。" },
+      { selector: ".contact-actions a:nth-child(3)", text: "GitHub 主页" },
       { selector: "footer span:nth-child(1)", text: "© 2026 赵泽恺" },
       { selector: "footer span:nth-child(2)", text: "Personal Homepage" }
     ]
@@ -305,6 +306,7 @@ const languageCopy = {
       { selector: ".practice-card:nth-child(2) li:nth-child(2)", html: "Built a time-credit allocation system using <span class=\"text-highlight\">TOPSIS with entropy weighting</span>, turning field research into a quantitative evaluation framework." },
       { selector: "#contact .section-kicker", text: "Contact" },
       { selector: "#contact h2", text: "Open to AI-driven data science projects where data insight can genuinely move business decisions." },
+      { selector: ".contact-actions a:nth-child(3)", text: "GitHub Profile" },
       { selector: "footer span:nth-child(1)", text: "© 2026 Zekai Zhao" },
       { selector: "footer span:nth-child(2)", text: "Personal Homepage" }
     ]
