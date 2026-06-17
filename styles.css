@@ -1260,14 +1260,16 @@ h1 {
 }
 
 .skill-grid,
-.practice-grid {
+.practice-grid,
+.project-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
 .skill-grid article,
-.practice-card {
+.practice-card,
+.project-card {
   padding: 24px;
 }
 
@@ -1288,6 +1290,133 @@ h1 {
 
 .practice-grid {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.projects-section .section-heading {
+  margin-bottom: 28px;
+}
+
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  position: relative;
+  border: 1px solid var(--glass-edge);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.024) 52%),
+    rgba(255, 255, 255, 0.052);
+  box-shadow: 0 18px 52px rgba(31, 18, 8, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px) saturate(1.06);
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 23px;
+  background: linear-gradient(125deg, var(--glass-sheen), transparent 38%);
+  pointer-events: none;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 64px;
+  height: 64px;
+  border-top: 1px solid rgba(231, 196, 111, 0.72);
+  border-right: 1px solid rgba(231, 196, 111, 0.72);
+  border-top-right-radius: 24px;
+  pointer-events: none;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 214, 107, 0.42);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.034) 52%),
+    rgba(255, 255, 255, 0.066);
+  box-shadow: 0 26px 68px rgba(31, 18, 8, 0.26), var(--glow), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.project-type {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-shadow: var(--gold-text-shadow);
+}
+
+.project-topline a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 244, 210, 0.24);
+  border-radius: 999px;
+  color: rgba(255, 249, 237, 0.92);
+  background: rgba(255, 255, 255, 0.058);
+  font-size: 13px;
+  font-weight: 800;
+  transition: color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.project-topline a:hover {
+  color: var(--green);
+  transform: translateY(-1px);
+  border-color: rgba(255, 214, 107, 0.44);
+  box-shadow: var(--glow);
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+.project-card p {
+  color: rgba(255, 249, 237, 0.86);
+  line-height: 1.76;
+}
+
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.project-metrics span {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid rgba(231, 196, 111, 0.28);
+  border-radius: 8px;
+  color: #16110b;
+  background: linear-gradient(145deg, rgba(255, 244, 210, 0.96), rgba(255, 214, 107, 0.82));
+  box-shadow: 0 12px 26px rgba(31, 18, 8, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  font-weight: 900;
 }
 
 .contact-section {
@@ -1403,7 +1532,8 @@ footer {
   }
 
   .skill-grid,
-  .experience-grid {
+  .experience-grid,
+  .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1535,6 +1665,7 @@ footer {
   .skill-grid,
   .experience-grid,
   .practice-grid,
+  .project-grid,
   .timeline-item {
     grid-template-columns: 1fr;
   }
